@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Search Results - Doge Search</title>
+  <style>
+    /* Your CSS styles */
+  </style>
+</head>
+<body bgcolor="#F5F5F">
+  <link rel="icon" type="image/ico" href="favicon.ico">
+  <!-- JavaScript code to load Google Custom Search Engine for Images -->
+  <script>
+    (function() {
+      var cx = '8448cd8f8a2384e7a'; // Replace with your own Image Search Custom Search Engine ID
+      var gcse = document.createElement('script');
+      gcse.type = 'text/javascript';
+      gcse.async = true;
+      gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(gcse, s);
+    })();
+  </script>
+
+  <!-- Doge Search Logo (Clickable to return to index) -->
+  <div style="text-align: center; padding-top: 20px;">
+    <a href="/index.html">
+      <img src="small.png" alt="Doge Search" border="0" height="78">
+    </a>
+  </div>
+
+  <!-- Google Custom Image Search Box -->
+  <gcse:searchbox></gcse:searchbox>
+
+  <!-- Google Custom Image Search Results -->
+  <div id="main">
+    <gcse:searchresults></gcse:searchresults>
+    <hr size="1">
+  </div>
+</body>
+</html>
